@@ -1,9 +1,23 @@
+Copy code
+<!DOCTYPE html>
 <html>
-
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+</head>
 <body>
-  <h1>YOUR NAME</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+  <header>
+    <h1>Welcome to {{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </header>
 
+  <main>
+    <!-- Your content goes here -->
+  </main>
+
+  <footer>
+    <!-- Footer content -->
+  </footer>
+</body>
 </html>
