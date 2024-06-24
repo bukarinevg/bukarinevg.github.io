@@ -2,35 +2,29 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Bukarin Evgeni</title>
+        <style>
+            .hidden{
+                display: none;
+            }
+        </style>
     <script defer src="main.js"></script></head>
     <body
-        class="h-screen flex justify-center items-center text-darkPrimary"
+        class=" hidden min-h-screen w-screen text-darkPrimary"
     >
+
         <div 
-            class="h-full w-full block flex justify-center flex-col items-center bg-lightPrimary"
+            class="min-h-screen block flex justify-center flex-col items-center bg-lightPrimary"
         >
-            <section class="max-w-screen-xl information">
+            <section class="information">
                 <div class="card animate-slideIn-1">
                     <p class="card__title">Bukarin Evgenii</p>
                     <p class="card__description">Software Engineer, Full-Stack, Web-Developer</p>
                     <p class="card_description">  </p>
                 </div>
-                <article class="flex justify-around w-auto animate-slideIn-2 gap-10">
-                    <div class="card w-64">
-                        <p class="card__title"> Social Links</p>
-                        <div class="card__description flex justify-around">
-                            <p>
-                                <a href="
-                                https://www.linkedin.com/in/eugenebukarin/
-                            "><i class="fa-brands fa-linkedin card__icon"></i> LinkedIn</a>
-                            </p>
-                            <p>
-                                <a href="https://github.com/bukarinevg/" ><i class="card__icon fa-brands fa-github"></i> GitHub</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card w-64">
+                <article class="animate-slideIn-2 sm:w-full md:grid md:grid-cols-2 md:gap-4">
+                    <div class="card md:w-64">
                         <p class="card__title">Contacts</p>
                         <div class="card__description flex flex-col justify-between">
                             <p>
@@ -47,35 +41,62 @@
                             </p>
                         </div>
                     </div>
-                </article>                
-            </section>
-            <section
-                class="shadow-custom max-w-screen-xl justify-center items-center text-darkPrimary p-4 rounded-lg shadow-lg animate-slideIn-3"
-            >
-                <p class="font-bold w-full text-center mb-2">Pet Ppojects </p>
-                    <div class="flex justify-around w-auto animate-slideIn-2 gap-10 overflow-y-auto p-2">
-                        <div class="card vlock w-64">
-                            <a href="https://bukarinevg.github.io/weather/" title="'weather forecast">
-                                <p class="card__title">Weather Forecast</p>
-                                <p class="card__description">Weather forecast for 24 hours / 5 days</p>
-                            </a>
+                    <div class="card md:w-64">
+                        <p class="card__title"> Social Links</p>
+                        <div class="card__description grid grid-cols-2 justify-center align-middle">
+                            <p>
+                                <a href="
+                                https://www.linkedin.com/in/eugenebukarin/
+                            ">
+                                <i class="fa-brands fa-linkedin card__icon"></i>
+                                LinkedIn
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://github.com/bukarinevg/" ><i class="card__icon fa-brands fa-github"></i> GitHub</a>
+                            </p>
+                            <p>
+                                <a href="https://t.me/eeuggene">
+                                    <i class="fa-brands fa-telegram card__icon"></i>
+                                    Telegram
+                               </a>
+                            </p>
+                            <p>
+                                <a href="https://wa.me/972587847322">
+                                    <i class="fa-brands fa-square-whatsapp card__icon"></i>
+                                    WhatsApp
+                                </a>
+                            </p>
                         </div>
-                        <div class="card w-64">
-                            <a href="https://bukarinevg.github.io/weather/" title="'weather forecast">
-                                <p class="card__title">Life time chat</p>
-                                <p class="card__description">Create room, invite friends, start chating, or join existing rooms
-                                </p>
-                            </a>
-                        </div>
-                        <div class="card w-64">
-                            <a href="https://bukarinevg.github.io/tic-tac-toe/" title="'weather forecast">
-                                <p class="card__title">Pros & Cons</p>
-                                <p class="card__description">Lovely game also known as Tic-Tac-Toe</p>
-                            </a>
-                        </div>                        
                     </div>
+                    
+                </article>   
+                <article class="shadow-custom  justify-center items-center text-darkPrimary p-4 rounded-lg shadow-lg animate-slideIn-3 w-full"
+                >
+                    <p class="font-bold w-full text-center mb-2">Pet Ppojects </p>
+                        <div class="h-48 grid justify-center align-middle md:grid-cols-2 animate-slideIn-2 gap-4 overflow-y-auto p-2">
+                            <div class="card vlock w-64">
+                                <a href="https://bukarinevg.github.io/weather/" title="'weather forecast">
+                                    <p class="card__title">Weather Forecast</p>
+                                    <p class="card__description">Weather forecast for 24 hours / 5 days</p>
+                                </a>
+                            </div>
+                            <div class="card w-64">
+                                <a href="https://bukarinevg.github.io/weather/" title="'weather forecast">
+                                    <p class="card__title">Life time chat</p>
+                                    <p class="card__description">Create room, invite friends, start chating, or join existing rooms
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="card w-64">
+                                <a href="https://bukarinevg.github.io/tic-tac-toe/" title="'weather forecast">
+                                    <p class="card__title">Pros & Cons</p>
+                                    <p class="card__description">Lovely game also known as Tic-Tac-Toe</p>
+                                </a>
+                            </div>                        
+                        </div>
+                </article>             
             </section>
-        </div>
         </div>
 
         <div 
@@ -84,6 +105,8 @@
         >
         <div>
             <form
+            class="bg-lightPrimary p-4 rounded-lg shadow-lg animate-slideIn-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            id="my-form"
             action="https://formspree.io/f/meojjzer"
             method="POST"
             >
