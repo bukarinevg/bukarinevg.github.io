@@ -2,6 +2,16 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
+    screens: {
+      'sm': {'max':'649px'},
+      // => @media (min-width: 576px) { ... }
+
+      'md':  {'min':'650px'},
+      // => @media (min-width: 960px) { ... }
+
+      'lg': { 'min': '1440px'},
+      // => @media (min-width: 1440px) { ... }
+    },
     colors: {
       'darkPrimary': '#333',
       'darkSecondary': '#555',
