@@ -43,10 +43,3 @@ jobs:
           github_token: ${{ secrets.MAIN_ACCESS }}
           publish_dir: ./dist
           publish_branch: gh-pages
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      name: TEST
-      run: ls -l
