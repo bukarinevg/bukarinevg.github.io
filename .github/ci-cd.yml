@@ -1,53 +1,45 @@
-name: CI/CD
+name: Continuous Integration and Deployment
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
-  
+  push:
+    branches:
+      - main
+
 env:
   NODE_VERSION: '20.x'
 
-
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Test
-      run: ls -l
-    - name: Install webpack
-      run: npm install npm install -D webpack-cli
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
-    - name: Install dependencies
-      run: npm install
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-    - name: Build
-      run: npm run build
+      - name: Install Dependencies
+        run: npm install
 
+      - name: Build
+        run: npm run build
 
-    - name: Deploy
-      run: |
-        npm install -g firebase-tools
-        firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
-
-    - name: Deploy to GitHub Pages
+      # This step only executes on push to main branch, not on pull requests
+      - name: Deploy to GitHub Pages
         if: github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.MAIN_ACCESS }}
           publish_dir: ./dist
-
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-
-    -name: Test
-      run: ls -l
