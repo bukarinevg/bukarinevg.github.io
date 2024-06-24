@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    -name: Test
+    - name: Test
       run: ls -l
     - name: Install webpack
       run: npm install npm install -D webpack-cli
