@@ -30,11 +30,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install Dependencies
-        run: npm install
-
       - name: Build
-        run: npm run build
+        run: |
+          npm install
+          npx webpack
+          npm run build
 
       # This step only executes on push to main branch, not on pull requests
       - name: Deploy to GitHub Pages
