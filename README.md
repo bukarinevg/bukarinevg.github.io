@@ -1,15 +1,22 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Welcome to mine portfolio page
 
-This project has been created using **webpack-cli**, you can now run
+## Stack
+- Webpack
+- TailwindCSS
+- PostCSS
+- SCSS
+- JS
+- HTML
+- GitHub actions
 
+## Installation
+
+```bash
+npm install
 ```
-npm run build
-```
 
-or
+## Usage
 
+```bash
+npm run serve
 ```
-yarn build
-```
-
-to bundle your application
