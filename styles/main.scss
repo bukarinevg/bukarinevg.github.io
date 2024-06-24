@@ -1,3 +1,51 @@
-body{
-    background-color: red;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+    .card {
+        @apply mb-4 p-4 flex rounded-2xl flex-col justify-center items-center transition-all duration-300 bg-lightPrimary;
+        @apply shadow-custom;
+    
+        &:hover {
+          @apply -translate-y-1;
+        }
+
+        &__title {
+            @apply font-bold text-2xl text-center text-darkPrimary border-b border-lightSecondary w-full pb-4;
+        }
+
+        &__description{
+            @apply mt-4 text-center text-darkSecondary w-full
+        }
+        
+
+    }
+
+    .block{
+        @apply bg-lightPrimary p-4 ;
+    }
 }
+
+
+@keyframes slideIn {
+    from {
+      transform: translateX(-300%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slideIn-1{
+    animation: slideIn 0.5s ease-in-out;
+  }
+
+  .animate-slideIn-2{
+    animation: slideIn 1s ease-in-out;
+  }
+

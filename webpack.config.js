@@ -13,7 +13,7 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader
 
 
 const config = {
-    entry: './src/index.js',
+    entry: './index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
     },
@@ -39,11 +39,29 @@ const config = {
             },
             {
                 test: /\.css$/i,
-                use: [stylesHandler,'css-loader'],
+                use: [
+                  "style-loader",
+                  "css-loader",
+                  {
+                    loader: "postcss-loader",
+                    options: {
+                      postcssOptions: {
+                        plugins: [
+                          [
+                            "postcss-preset-env",
+                            {
+                              // Options
+                            },
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                ],
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: [stylesHandler, 'css-loader', 'sass-loader'],
+                use: [stylesHandler, 'css-loader', 'sass-loader', "postcss-loader"],
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
