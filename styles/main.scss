@@ -13,12 +13,40 @@
           @apply -translate-y-1;
         }
 
+        &__icon{
+          @apply h-5;
+        }
+        
+        
         &__title {
             @apply font-bold text-2xl text-center text-darkPrimary border-b border-lightSecondary w-full pb-4;
         }
 
         &__description{
-            @apply mt-4 text-center text-darkSecondary w-full
+            @apply mt-4 text-center text-darkSecondary w-full;
+            p{
+              @apply pt-2 pb-2;
+              &:hover{
+                @apply animate-bounce;
+              }
+            
+            }
+        }
+        
+        &::-webkit-scrollbar {
+          @apply w-3
+        }
+        
+        &::-webkit-scrollbar-track {
+          @apply bg-lightPrimary
+        }
+        
+        &::-webkit-scrollbar-thumb {
+          @apply bg-scrollBarThumb border-none;
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {
+          @apply bg-scrollBarThumbHover
         }
         
 
@@ -48,4 +76,10 @@
   .animate-slideIn-2{
     animation: slideIn 1s ease-in-out;
   }
+
+  .animate-slideIn-3{
+    animation: slideIn 2s ease-in-out;
+  }
+
+
 

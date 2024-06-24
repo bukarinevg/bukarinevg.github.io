@@ -7,6 +7,9 @@ module.exports = {
       'darkSecondary': '#555',
       'lightPrimary': '#f1f1f1',
       'lightSecondary': '#ccc',
+      'scrollBarThumb': '#888',
+      'scrollBarThumbHover': '#555',
+
 
     },
     extend: {
