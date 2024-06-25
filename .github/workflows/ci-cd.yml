@@ -37,8 +37,8 @@ jobs:
 
       - name: reset CNAME
         run: |
-          touch CNAME
-          echo "dist/evgbukar.com" > CNAME
+          touch dist/CNAME
+          echo "evgbukar.com" > CNAME
           ls -l dist
 
       # This step only executes on push to main branch, not on pull requests
