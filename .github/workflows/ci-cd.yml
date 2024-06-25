@@ -39,7 +39,7 @@ jobs:
         run: |
           touch CNAME
           echo "dist/evgbukar.com" > CNAME
-          ls -l
+          ls -l dist
 
       # This step only executes on push to main branch, not on pull requests
       - name: Deploy to GitHub Pages
