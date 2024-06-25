@@ -43,7 +43,7 @@ jobs:
           github_token: ${{ secrets.MAIN_ACCESS }}
           publish_dir: ./dist
 
-      # - name: reset CNAME
-      #   run: |
-      #     touch CNAME
-      #     echo "evgbukar.com" > CNAME
+      - name: reset CNAME
+        run: |
+          touch CNAME
+          echo "evgbukar.com" > CNAME
