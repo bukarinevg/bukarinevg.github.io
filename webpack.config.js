@@ -34,6 +34,18 @@ const config = {
     module: {
         rules: [
             {
+              test: /\.(png|jpe?g|gif|svg)$/i,
+              use: [
+                {
+                  loader: 'url-loader',
+                  options: {
+                    limit: 8192, // 8KB
+                    name: 'images/[name].[hash].[ext]',
+                  },
+                },
+              ],
+            },
+            {
                 test: /\.(js|jsx)$/i,
                 loader: 'babel-loader',
             },
@@ -67,11 +79,31 @@ const config = {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
                 type: 'asset',
             },
+            {
+              test: /\.(png|jpe?g|gif)$/i,
+              use: [
+                {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[path][name].[ext][query]',
+                  },
+                },
+              ],
+            },
+            {
+              test: /\.html$/i,
+              loader: "html-loader",
+            },
 
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
     },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+      }),
+    ],
 };
 
 module.exports = () => {
