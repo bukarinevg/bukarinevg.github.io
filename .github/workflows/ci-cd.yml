@@ -39,6 +39,7 @@ jobs:
         run: |
           touch CNAME
           echo "evgbukar.com" > CNAME
+          ls -l
 
       # This step only executes on push to main branch, not on pull requests
       - name: Deploy to GitHub Pages
