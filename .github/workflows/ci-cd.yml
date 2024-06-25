@@ -35,6 +35,11 @@ jobs:
           npm install
           npx webpack
 
+      - name: reset CNAME
+        run: |
+          touch CNAME
+          echo "evgbukar.com" > CNAME
+
       # This step only executes on push to main branch, not on pull requests
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push'
@@ -43,7 +48,3 @@ jobs:
           github_token: ${{ secrets.MAIN_ACCESS }}
           publish_dir: ./dist
 
-      - name: reset CNAME
-        run: |
-          touch CNAME
-          echo "evgbukar.com" > CNAME
