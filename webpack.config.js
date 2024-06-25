@@ -103,7 +103,7 @@ const config = {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        favicon: './src/assets/favicon.ico',
+        favicon: './images/favicon.ico',
       }),
       new CopyPlugin({
         patterns: [
