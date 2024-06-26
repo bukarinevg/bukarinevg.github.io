@@ -9,7 +9,7 @@ document.body.classList.remove('hidden');
 let form = document.getElementById("my-form");
 
 
-console.log('Hey gotch you!');
+console.log('Hey gotch ya!');
 
 if(form != null){
     form.addEventListener("submit", handleSubmit)
