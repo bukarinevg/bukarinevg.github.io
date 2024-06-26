@@ -8,6 +8,9 @@ import '@fortawesome/fontawesome-free/js/brands'
 document.body.classList.remove('hidden');
 let form = document.getElementById("my-form");
 
+
+console.log('Hey gotch you!');
+
 if(form != null){
     form.addEventListener("submit", handleSubmit)
     async function handleSubmit(event) {
