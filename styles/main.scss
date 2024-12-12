@@ -5,59 +5,61 @@
 
 
 @layer components {
-    .card {
-        @apply mb-4 p-4 flex rounded-2xl flex-col justify-center items-center transition-all duration-300 bg-lightPrimary;
-        @apply shadow-custom;
-    
-        &:hover {
-          @apply -translate-y-1;
-        }
+  .card {
+      @apply mb-4 p-4 flex rounded-2xl flex-col justify-center items-center transition-all duration-300 bg-lightPrimary;
+      @apply shadow-custom;
+  
+      &:hover {
+        @apply -translate-y-1;
+      }
 
-        &__icon{
-          @apply h-5;
-        }
-        
-        
-        &__title {
-            @apply font-bold md:text-2xl text-center text-darkPrimary border-b border-lightSecondary w-full pb-4;
-        }
+      &__icon{
+        @apply h-5;
+      }
+      
+      
+      &__title {
+          @apply font-bold md:text-2xl text-center text-darkPrimary border-b border-lightSecondary w-full pb-4;
+      }
 
-        &__description{
-            @apply mt-4 text-center text-darkSecondary w-full;
-            p{
-              @apply pt-2 pb-2;
-              &:hover{
-                @apply animate-bounce;
-              }
-            
+      &__description{
+          @apply mt-4 text-center text-darkSecondary w-full;
+          p{
+            @apply pt-2 pb-2;
+            &:hover{
+              @apply animate-bounce;
             }
-        }
-        
-        &::-webkit-scrollbar {
-          @apply w-3
-        }
-        
-        &::-webkit-scrollbar-track {
-          @apply bg-lightPrimary
-        }
-        
-        &::-webkit-scrollbar-thumb {
-          @apply bg-scrollBarThumb border-none;
-        }
-        
-        &::-webkit-scrollbar-thumb:hover {
-          @apply bg-scrollBarThumbHover
-        }
-        
+          
+          }
+      }
+      
+      &::-webkit-scrollbar {
+        @apply w-3
+      }
+      
+      &::-webkit-scrollbar-track {
+        @apply bg-lightPrimary
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        @apply bg-scrollBarThumb border-none;
+      }
+      
+      &::-webkit-scrollbar-thumb:hover {
+        @apply bg-scrollBarThumbHover
+      }
+      
 
-    }
+  }
 
-    .block{
-        @apply bg-lightPrimary ;
-    }
+  .block-info{
+      @apply bg-lightPrimary ;
+  }
 }
 
 
+
+/* Animation keyframes*/
 
 @keyframes slideIn {
   from {
@@ -69,18 +71,42 @@
     opacity: 1;
   }
 }
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-300%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
   
-  .animate-slideIn-1{
-    animation: slideIn 0.5s ease-in-out;
-  }
+/* Animation slide-in */
+.animate-slideIn-1{
+  animation: slideIn 0.5s ease-in-out;
+}
 
-  .animate-slideIn-2{
-    animation: slideIn 1s ease-in-out;
-  }
+.animate-slideIn-2{
+  animation: slideIn 1s ease-in-out;
+}
 
-  .animate-slideIn-3{
-    animation: slideIn 1.5s ease-in-out;
-  }
+.animate-slideIn-3{
+  animation: slideIn 1.5s ease-in-out;
+}
 
+/* Animation slide-down */
+.animate-slideDown-1 {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+.animate-slideDown-2 {
+  animation: slideDown 1s ease-in-out;
+}
+
+.animate-slideDown-3 {
+  animation: slideDown 1.5s ease-in-out;
+}
 
 

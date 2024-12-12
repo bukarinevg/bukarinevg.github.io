@@ -13,70 +13,79 @@
         </style>
     </head>
     <body
-        class=" hidden min-h-screen text-darkPrimary"
+        class="hidden  text-darkPrimary"
     >
-
         <div 
-            class="  p-4 min-h-screen block flex justify-center flex-col items-center bg-lightPrimary"
+            class="
+                p-4  block-info flex justify-center flex-col items-center bg-lightPrimary 
+                lg:flex lg:flex-row lg:gap-2 lg:justify-center lg:items-center lg:h-screen lg:p-4
+            "
         >
-            <section class="information">
-                <div class="card animate-slideIn-1 w-full">
-                    <p class="card__title">Bukarin Evgenii</p>
-                    <p class="card__description">Software Engineer, Back-End, Full-Stack, Web-Developer</p>
-                    <p class="card_description">  </p>
+            <section class="information lg:flex lg:flex-row lg:gap-4 lg:text-darkPrimary lg:p-4 ">
+
+                <div class="">
+                <!-- header -->
+                    <div class="card animate-slideIn-1  w-full  lg:h-40">
+                        <p class="card__title">Bukarin Evgenii</p>
+                        <p class="card__description">Software Engineer, Back-End, Full-Stack, Web-Developer</p>
+                        <p class="card_description">  </p>
+                    </div>
+                    <!-- contacts -->
+                    <article class="animate-slideIn-2 w-full grid grid-cols-2 gap-4 lg:min-w-max lg:h-40 ">
+                        <div class="card lg:min-w-52">
+                            <p class="card__title">Contacts</p>
+                            <div class="card__description flex flex-col justify-between">
+                                <p>
+                                    <a target="_blank" href="mailto:bukarinevgeni@gmail.com">
+                                        <i  class="fa-solid fa-envelope card__icon"></i>
+                                        bukarinevgeni@gmail.com
+                                    </a>
+                                </p>
+                                <p>
+                                <a target="_blank" href="tel:+972587847322">
+                                    <i class="fa-solid fa-phone card__icon"></i>
+                                    +972587847322
+                                </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card lg:min-w-52">
+                            <p class="card__title"> Social Links</p>
+                            <div class="card__description grid grid-cols-2 justify-center align-middle">
+                                <p>
+                                    <a target="_blank" href="
+                                    https://www.linkedin.com/in/eugenebukarin/
+                                ">
+                                    <i class="fa-brands fa-linkedin card__icon"></i>
+                                    LinkedIn
+                                    </a>
+                                </p>
+                                <p>
+                                    <a target="_blank" href="https://github.com/bukarinevg/" ><i class="card__icon fa-brands fa-github"></i> GitHub</a>
+                                </p>
+                                <p>
+                                    <a target="_blank" href="https://t.me/eeuggene">
+                                        <i class="fa-brands fa-telegram card__icon"></i>
+                                        Telegram
+                                </a>
+                                </p>
+                                <p>
+                                    <a target="_blank" href="https://wa.me/972587847322">
+                                        <i class="fa-brands fa-square-whatsapp card__icon"></i>
+                                        WhatsApp
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </article>   
                 </div>
-                <article class="animate-slideIn-2 w-full md:grid md:grid-cols-2 md:gap-4">
-                    <div class="card">
-                        <p class="card__title">Contacts</p>
-                        <div class="card__description flex flex-col justify-between">
-                            <p>
-                                <a target="_blank" href="mailto:bukarinevgeni@gmail.com">
-                                    <i  class="fa-solid fa-envelope card__icon"></i>
-                                    bukarinevgeni@gmail.com
-                                </a>
-                            </p>
-                            <p>
-                            <a target="_blank" href="tel:+972587847322">
-                                <i class="fa-solid fa-phone card__icon"></i>
-                                +972587847322
-                            </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="card__title"> Social Links</p>
-                        <div class="card__description grid grid-cols-2 justify-center align-middle">
-                            <p>
-                                <a target="_blank" href="
-                                https://www.linkedin.com/in/eugenebukarin/
-                            ">
-                                <i class="fa-brands fa-linkedin card__icon"></i>
-                                LinkedIn
-                                </a>
-                            </p>
-                            <p>
-                                <a target="_blank" href="https://github.com/bukarinevg/" ><i class="card__icon fa-brands fa-github"></i> GitHub</a>
-                            </p>
-                            <p>
-                                <a target="_blank" href="https://t.me/eeuggene">
-                                    <i class="fa-brands fa-telegram card__icon"></i>
-                                    Telegram
-                               </a>
-                            </p>
-                            <p>
-                                <a target="_blank" href="https://wa.me/972587847322">
-                                    <i class="fa-brands fa-square-whatsapp card__icon"></i>
-                                    WhatsApp
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    
-                </article>   
-                <article class="shadow-custom  justify-center items-center text-darkPrimary p-4 rounded-lg shadow-lg animate-slideIn-3 w-full"
+                <!--projects-->
+                <article 
+                    class="shadow-custom  justify-center items-center text-darkPrimary p-4 rounded-lg shadow-lg animate-slideIn-3 w-full"
                 >
                     <p class="font-bold w-full text-center mb-2">Pet Ppojects </p>
-                        <div class=" grid justify-center align-middle md:grid-cols-2 animate-slideIn-2 gap-4  p-2">
+                        <div class=" grid justify-center align-middle md:grid-cols-2 animate-slideIn-2 gap-4  p-2 ">
                             <div class="card vlock w-64">
                                 <a target="_blank" href="http://evgbukar.com/weather/" title="'weather forecast">
                                     <p class="card__title">Weather Forecast</p>
@@ -97,11 +106,12 @@
                                 </a>
                             </div>  
                             <div class="card w-64">
-                                <a target="_blank" href="http://www.evgbukar.com/" title="portfolio">
-                                    <p class="card__title">Portfolio</p>
-                                    <p class="card__description">Mine portfolio card</p>
+                                <a target="_blank" href="http://www.evgbukar.com/bug-killer" title="portfolio">
+                                    <p class="card__title">Bug Killer</p>
+                                    <p class="card__description">Online WEB game <br /> KILL THIS BUGS!</p>
                                 </a>
-                            </div>                        
+                            </div>   
+
                         </div>
                 </article>             
             </section>
