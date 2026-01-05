@@ -3,21 +3,22 @@ import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
-import { CONTACTS, SOCIAL_LINKS, PROJECTS, FORM_ACTION } from './constants';
+import { PERSONAL, CONTACTS, SOCIAL_LINKS, PROJECTS, FORM_ACTION } from './constants';
 
 
 document.body.classList.remove('hidden');
 
-// Apply constants to links
-function applyLinks() {
-  // Contact links
+function updateContactLinks() {
   const emailLink = document.querySelector('[data-link="email"]');
   const phoneLink = document.querySelector('[data-link="phone"]');
+  const emailContent = document.querySelector('[data-content="email"]');
+  const phoneContent = document.querySelector('[data-content="phone"]');
   
   if (emailLink) emailLink.href = `mailto:${CONTACTS.email}`;
   if (phoneLink) phoneLink.href = `tel:${CONTACTS.phone}`;
+  if (emailContent) emailContent.textContent = CONTACTS.email;
+  if (phoneContent) phoneContent.textContent = CONTACTS.phone;
   
-  // Social links
   const linkedinLink = document.querySelector('[data-link="linkedin"]');
   const githubLink = document.querySelector('[data-link="github"]');
   const telegramLink = document.querySelector('[data-link="telegram"]');
@@ -27,8 +28,9 @@ function applyLinks() {
   if (githubLink) githubLink.href = SOCIAL_LINKS.github;
   if (telegramLink) telegramLink.href = SOCIAL_LINKS.telegram;
   if (whatsappLink) whatsappLink.href = SOCIAL_LINKS.whatsapp;
-  
-  // Project links
+}
+
+function updateProjectLinks() {
   const weatherLink = document.querySelector('[data-link="weather"]');
   const chatLink = document.querySelector('[data-link="chat"]');
   const ticTacToeLink = document.querySelector('[data-link="ticTacToe"]');
@@ -38,17 +40,25 @@ function applyLinks() {
   if (chatLink) chatLink.href = PROJECTS.chat;
   if (ticTacToeLink) ticTacToeLink.href = PROJECTS.ticTacToe;
   if (bugKillerLink) bugKillerLink.href = PROJECTS.bugKiller;
+}
+
+function applyInformation() {
+  const nameContent = document.querySelector('[data-content="name"]');
+  const positionContent = document.querySelector('[data-content="position"]');
   
-  // Form action
+  if (nameContent) nameContent.textContent = PERSONAL.name;
+  if (positionContent) positionContent.textContent = PERSONAL.position;
+  
+  updateContactLinks();
+  updateProjectLinks();
+  
   const form = document.getElementById("my-form");
   if (form) form.action = FORM_ACTION;
 }
 
-applyLinks();
+applyInformation();
 
 let form = document.getElementById("my-form");
-
-
 console.log('Hey gotch ya!');
 
 if(form != null){

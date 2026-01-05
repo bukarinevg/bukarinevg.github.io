@@ -1,3 +1,9 @@
+// Personal Information
+export const PERSONAL = {
+  name: 'Bukarin Evgenii',
+  position: 'Software Engineer, Back-End, Full-Stack, Web-Developer',
+};
+
 // Contact Information
 export const CONTACTS = {
   email: 'ebuk0309@gmail.com',
