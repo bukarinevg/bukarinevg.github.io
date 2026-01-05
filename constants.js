@@ -1,6 +1,6 @@
 // Contact Information
 export const CONTACTS = {
-  email: 'bukarinevgeni@gmail.com',
+  email: 'ebuk0309@gmail.com',
   phone: '+972587847322',
 };
 
@@ -8,7 +8,7 @@ export const CONTACTS = {
 export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/in/eugenebukarin/',
   github: 'https://github.com/bukarinevg/',
-  telegram: 'https://t.me/eeuggene',
+  telegram: 'https://t.me/evvggenni03',
   whatsapp: 'https://wa.me/972587847322',
 };
 
