@@ -14,7 +14,7 @@ export const CONTACTS = {
 export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/in/eugenebukarin/',
   github: 'https://github.com/bukarinevg/',
-  telegram: 'https://t.me/972587847322',
+  telegram: 'https://t.me/+972587847322',
   whatsapp: 'https://wa.me/972587847322',
 };
 
